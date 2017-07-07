@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-xs-6 col-sm-3 col-md-3">
+    <img [src]="product.image" class="img-responsive" style="width:150px" />
+  </div>
+  <div class="col-xs-6 col-sm-9 col-md-9">
+    <span class="badge">{{idx+1}}</span>
+    <h4>{{product.name}} <small>{{product.makeDate|date:'yyyy'}}</small></h4>
+    <h5>{{product.price|priceDiscount:product.discout|currency:'USD':true}}</h5>
+    <button (click)="onBuyClick()" *ngIf="product.canBuy" class="btn btn-sm btn-danger">buy</button>
+    <hr/>
+
+    <section>
+
+      <ul class="nav nav-tabs">
+        <li [class.active]="isTabSelected(1)"><a href (click)="onTabChange(1,$event)">Description</a></li>
+        <li [class.active]="isTabSelected(2)"><a href (click)="onTabChange(2,$event)">Soecification</a></li>
+        <li [class.active]="isTabSelected(3)"><a href (click)="onTabChange(3,$event)">Reviews</a></li>
+      </ul>
+
+      <div class="panel" *ngIf="isTabSelected(1)">
+        <p>{{product.description}}</p>
+      </div>
+      <div class="panel" *ngIf="isTabSelected(2)">Not Yet</div>
+      <div class="panel" *ngIf="isTabSelected(3)"> 
+
+          <div class="alert alert-danger" *ngFor="let review of product.reviews">
+            <span class="badge">{{review.stars}}</span> &mdash; {{review.author}}
+            <hr/>
+            <p>{{review.body}}</p>  
+          </div>  
+
+          <hr/>
+          
+
+
+      </div>
+
+    </section>
+
+  </div>
+</div>

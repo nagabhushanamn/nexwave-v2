@@ -1,0 +1,77 @@
+<div class="col-md-6 col-sm-6">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Customer Form</div>
+    <div class="panel-body">
+
+      <form #customerFormGroup="ngForm" 
+            (submit)="createOrUpdateCustomer(customerFormGroup,$event)">
+
+        <div class="form-group" [class.has-error]="firstNameVar.invalid && firstNameVar.touched">
+          <label for="fName">First Name </label>
+          <input id="fName" 
+                 class="form-control" 
+                 required
+                 minlength="4"
+                 [ngModel]="customerModel.firstName" 
+                 (ngModelChange)="customerModel.firstName=$event"
+                 name="firstName"
+                 #firstNameVar="ngModel"
+                 />
+          <div class="help-block" *ngIf="firstNameVar.invalid && firstNameVar.touched">
+            <span *ngIf="firstNameVar.errors.required">FirstName is Required</span>
+            <span *ngIf="firstNameVar.errors.minlength">>=4</span>
+          </div>         
+        </div>
+         <div class="form-group">
+          <label for="lName">Last Name </label>
+          <input id="lName" 
+                 class="form-control"
+                 [(ngModel)]="customerModel.lastName"
+                 name="lastName"
+                 #lastNameVar="ngModel"
+                 />
+        </div>    
+        <button type="button" (click)="loadCustomer()" class="btn btn-primary">Load Customer</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>  
+      <hr/>
+      
+      Customer-Form
+      <pre>
+        pristine : {{customerFormGroup.pristine}}
+        dirty    : {{customerFormGroup.dirty}}
+        valid    : {{customerFormGroup.valid}}
+        invalid  : {{customerFormGroup.invalid}}
+        untouched: {{customerFormGroup.untouched}} 
+        touched  : {{customerFormGroup.touched}} 
+
+        submitted: {{customerFormGroup.submitted}}  
+      </pre> 
+      
+       First-Name
+       <pre>
+        pristine : {{firstNameVar.pristine}}
+        dirty    : {{firstNameVar.dirty}}
+        valid    : {{firstNameVar.valid}}
+        invalid  : {{firstNameVar.invalid}}
+        untouched: {{firstNameVar.untouched}} 
+        touched  : {{firstNameVar.touched}} 
+        errors   : {{firstNameVar.errors|json}} 
+      </pre>  
+
+      <!--
+      <pre>
+        {{customerFormGroup.value|json}}
+      </pre>
+
+      <pre>
+        {{customerModel|json}}
+      </pre> 
+      --> 
+
+
+    </div>
+  </div>
+
+</div>

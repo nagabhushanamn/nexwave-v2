@@ -1,0 +1,29 @@
+<div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">{{title}}</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <span class="badge">{{cart.length}}</span> in cart <hr/>
+  </div>
+
+  <div class="container">
+
+    <div class="list-group">
+      <div *ngFor="let product of products|slice:0:10;let idx=index" class="list-group-item">
+        <app-product [idx]="idx" 
+                     [product]="product" 
+                     (buy)="addToCart($event)">
+        </app-product>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

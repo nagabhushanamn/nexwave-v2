@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"> Counter App : {{currentCount}} </div>
+  <div class="panel-body">
+
+    <app-hit-button label="1" 
+                    (hit)="onHitClick($event)">
+    </app-hit-button>
+   
+    <hr/>
+
+    <app-display [value]="currentCount">
+    </app-display>
+
+  </div>
+</div>
