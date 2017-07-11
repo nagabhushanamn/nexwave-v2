@@ -1,0 +1,27 @@
+<div class="container">
+
+
+    <header>
+        <nav>
+            <div class="page-header">
+                <a routerLink="/">PM-app</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="row">
+
+        <div class="col-sm-3 col-md-3">
+            <ul class="nav stacked-nav">
+                <li><a href routerLink="products"> View All </a></li>
+                <li><a href routerLink="pm-new"> Add New </a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</div>

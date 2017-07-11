@@ -1,0 +1,31 @@
+<div class="col-md-8 col-md-8">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading"> Product Form </div>
+    <div class="panel-body">
+
+      <form [formGroup]="productForm" (submit)="saveProduct()">
+        <div class="form-group">
+          <label> Name </label>
+          <input class="form-control" formControlName="name" />
+        </div>
+        <div class="form-group">
+          <label> Price </label>
+          <input class="form-control" formControlName="price" />
+        </div>
+        <div class="form-group">
+          <label> MakeDate </label>
+          <input class="form-control" formControlName="makeDate" />
+        </div>
+        <div class="form-group">
+          <label> Description </label>
+          <textarea class="form-control" formControlName="description"></textarea>
+        </div>
+        <button class="btn btn-primary">Save</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

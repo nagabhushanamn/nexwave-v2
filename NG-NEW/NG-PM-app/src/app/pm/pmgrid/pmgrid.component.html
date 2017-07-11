@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"> All Products </div>
+  <div class="panel-body">
+    <table class="table table-bordered table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Make-date</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>
+            <a [routerLink]="['/products',{outlets:{'view':[product.id]}}]">
+            {{product.name}}
+            </a>
+          </td>
+          <td>{{product.price|currency:'INR':true}}</td>
+          <td>{{product.makeDate|date}}</td>
+          <td><a href (click)="editProduct(product.id,$event)"><span class="glyphicon glyphicon-edit"></span></a></td>
+          <td><a href (click)="deleteProduct(product.id,$event)"><span class="glyphicon glyphicon-trash"></span></a></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
