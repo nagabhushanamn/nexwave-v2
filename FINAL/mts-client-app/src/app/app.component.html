@@ -1,7 +1,26 @@
 
+<header>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href routerLink="/">MTS</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href routerLink="/">Home</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
 <div class="container">
-	<div class="page-header">mts-app</div>
-	
-	
-	
+	<hr />
+		<a class="btn btn-danger" 
+		   routerLink="txr-form"> 
+		   Txr 
+		 </a>
+	<hr />
+	<router-outlet></router-outlet>
 </div>

@@ -2,6 +2,7 @@ package com.wissen.mts.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wissen.mts.service.AccountBalanceException;
 import com.wissen.mts.service.TxrService;
 
+//@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/txr")
 public class TxrController {

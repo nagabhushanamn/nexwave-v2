@@ -7,9 +7,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USERS",schema="mts")
+@Table(name = "USERS", schema = "mts")
 public class User {
- 
+
 	@Id
 	@GeneratedValue
 	private int id;
@@ -17,9 +17,9 @@ public class User {
 	private String email;
 	private String mobile;
 	private String address;
-	
-//	@OneToOne(mappedBy="user",targetEntity=Account.class)
-//	private Account account;
+
+	// @OneToOne(mappedBy="user",targetEntity=Account.class)
+	// private Account account;
 
 	public int getId() {
 		return id;
