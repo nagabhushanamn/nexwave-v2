@@ -1,0 +1,99 @@
+
+
+Developer Testing
+------------------------------------------------------------------
+
+
+	- UnitTesting
+	- Integration Testing
+	
+	-------------------------------------------
+	
+	Unit-Testing Frameworks
+	
+	- junit
+	- Test NG
+	
+	-------------------------------------------
+	
+	jUnit
+	--------
+	
+		-> helps to write test-cases with test-methods
+		-> provides test-runners to run test-cases
+		
+		
+		jUnit ==> AAA	
+		
+		
+		A -> Arrange
+		A -> Act
+		A -> Assert
+		
+		------------------------------------------
+		
+		
+		dependent + dependency
+		
+		Txrervice + AccountRepository ( Stub  | Mocks)
+		
+		
+		
+		2 ways , to do unit testing in the place of dependency
+		
+		
+		1. using Stub
+		2. using Mock
+		
+------------------------------------------------------------------------------
+
+
+server-side tech
+-----------------
+
+ 1. Relational Model
+
+ 2. Application Model
+
+    Object Model
+    
+    1. Customer
+    2. Account
+    3. Txn
+      
+      a. service-layer : process
+
+      d. data-layer    : data-layer
+
+---------------------------------------------
+
+
+Java - Data Access Tech for RDBMS
+---------------------------------
+
+
+	-> Jdbc
+	-> ORM F.W ( Hibernate , Toplink , EclpseLink,.. )
+	-> JPA with any provider
+	
+	
+------------------------------------------------	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

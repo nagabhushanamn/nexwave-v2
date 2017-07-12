@@ -1,0 +1,53 @@
+
+
+
+ web-services
+ -------------
+ 
+ 2 approaches
+ 
+ 
+   1. SOAP protocol
+   
+   2. REST arch-styles
+   
+  ---------------------------------------------
+  
+  
+   POST : /api/txr
+   
+   representational state format: json/xml
+   
+   
+   request: 
+   
+   json:
+   
+       {
+       "amount":1000,
+       "fromAccNum":"1",
+       "toAccNum":"2"
+       }
+   
+   
+   response: 
+   
+   json:
+   
+       {
+       "status":"......"
+       }
+   ----------------------------------------------
+   
+   
+   EndPoint
+   
+   		  
+   
+   
+   
+   
+   	
+  
+  
+      
