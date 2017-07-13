@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.wissen.mts.model.User;
 
 //@CrossOrigin(origins="*")
-@RepositoryRestResource(path = "users")
+//@RepositoryRestResource(path = "users")
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 }

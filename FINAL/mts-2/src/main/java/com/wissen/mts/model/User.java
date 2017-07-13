@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "USERS", schema = "mts")
@@ -19,10 +20,19 @@ public class User {
 	private String address;
 
 	// @OneToOne(mappedBy="user",targetEntity=Account.class)
-	// private Account account;
+	@Transient
+	private Account account;
 
 	public int getId() {
 		return id;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
 	}
 
 	public void setId(int id) {

@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.wissen.mts.model.Account;
 import com.wissen.mts.model.User;
 import com.wissen.mts.service.UserService;
 
-//@RestController
+@RestController
 public class UserController {
 
 	@Autowired
@@ -91,5 +92,25 @@ public class UserController {
 	        userService.deleteAllUsers();
 	        return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
 	    }
+	    
+	//------------------------------------------------------------------------------
+	    
+	    @RequestMapping("/users/nag")
+	   public User getUserWithAccount() {
+	    	
+		User user=new User();
+		user.setName("Nag");
+		
+		Account account=new Account();
+		account.setNum("123");
+		account.setBalance(100.00);;
+		
+		user.setAccount(account);
+		
+		return user;
+		
+	   } 
+	    
+	    
 
 }

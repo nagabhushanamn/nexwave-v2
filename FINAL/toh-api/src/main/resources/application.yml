@@ -1,0 +1,8 @@
+jwt:
+  header: Authorization
+  secret: shhhh
+  expiration: 604800
+  route:
+    authentication:
+      path: auth
+      refresh: refresh

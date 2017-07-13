@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wissen.mts.service.AccountBalanceException;
 import com.wissen.mts.service.TxrService;
 
-//@CrossOrigin(origins="*")
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/txr")
 public class TxrController {

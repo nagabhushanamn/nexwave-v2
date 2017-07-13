@@ -1,0 +1,22 @@
+<div class="col-sm-4 col-md-4">
+<div class="panel panel-default">
+	<div class="panel-heading">Txr Form</div>
+	<div class="panel-body">
+		<form [formGroup]="txrForm" (submit)="doTxr($event)">
+			<div class="form-group">
+				<label>Amount</label>
+				<input class="form-control" formControlName="amount">
+			</div>
+			<div class="form-group">
+				<label>From Account</label>
+				<input class="form-control" formControlName="fromAccNum">
+			</div>
+			<div class="form-group">
+				<label>To Account</label>
+				<input class="form-control" formControlName="toAccNum">
+			</div>
+			<button class="btn btn-primary">Txr</button>
+		</form>
+	</div>
+</div>
+</div>
